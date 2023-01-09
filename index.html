@@ -40,14 +40,14 @@
       <div class="overlay"></div>
       <div class="content h-75 d-flex align-items-center">
         <div class="container text-center text-white">
-          <img width="600" height="400" src="img/logo.jpeg" alt="" class="img-fluid">
+          <img width="600" height="400" src="img/head.png" alt="" class="img-fluid">
         </div>
       </div><a href="#about" class="scroll-btn link-scroll"><i class="fas fa-angle-double-down"></i></a>
     </section>
     <!-- Navbar-->
     <header class="header sticky-top">
       <nav class="navbar navbar-expand-lg bg-white border-bottom py-0">
-        <div class="container"><a href="#" class="navbar-brand py-1"><img width="60" height="40" src="img/logo.jpeg"
+        <div class="container"><a href="#" class="navbar-brand py-1"><img width="60" height="40" src="img/logo.png"
               alt="" class="img-fluid"></a>
           <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
@@ -83,24 +83,31 @@
         <h2 class="lined text-uppercase">Services</h2>
       </header>
       <div class="row text-center justify-content-center col-12 align-content-center mx-0 px-0">
-        <div class="col-lg-3 bg-white m-2">
+        <div class="col-lg-2 bg-white m-2 rounded">
           <div class="p-4">
             <div class="icon mb-3"><i class="fa-solid fa-file-invoice"></i></div>
             <h4 class="text-uppercase font-weight-bold">Venmo </h4>
 
           </div>
         </div>
-        <div class="col-lg-3 bg-white m-2">
+        <div class="col-lg-2 bg-white m-2 rounded">
           <div class="p-4">
             <div class="icon mb-3"><i class="fa-solid fa-receipt"></i></div>
             <h4 class="text-uppercase font-weight-bold">Zelle</h4>
 
           </div>
         </div>
-        <div class="col-lg-3 bg-white m-2">
+        <div class="col-lg-2 bg-white m-2 rounded">
           <div class="p-4">
             <div class="icon mb-3"><i class="fab fa-searchengin"></i></div>
             <h4 class="text-uppercase font-weight-bold">Paypal</h4>
+
+          </div>
+        </div>
+        <div class="col-lg-2 bg-white m-2 rounded">
+          <div class="p-4">
+            <div class="icon mb-3"><i class="fab fa-searchengin"></i></div>
+            <h4 class="text-uppercase font-weight-bold">cash app</h4>
 
           </div>
         </div>
@@ -143,35 +150,36 @@
                     class="form-control">
                 </div>
 
-                <div class="form-group col-lg-4">
+                <div class="form-group col-lg-4 mt-3">
                   <label for="phone">Hoodie Size</label>
-                  <select name="cars" id="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
+                  <select id="size" name="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="x-large">X-Large</option>
                   </select>
                 </div>
-                <div class="form-group col-lg-4">
+                <div class="form-group col-lg-4 mt-3">
                   <label for="phone">Sweatpants size</label>
-                  <select name="cars" id="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
+                  <select id="size" name="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="x-large">X-Large</option>
                   </select>
                 </div>
-                <div class="form-group col-lg-4">
+                <div class="form-group col-lg-12 py-4">
                   <label for="phone"># of entries</label>
-                  <select name="cars" id="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
+                  <select id="amount" name="amount">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                   </select>
                 </div>
                 <div class="form-group col-lg-12">
-                  <button type="submit" value="submit" class="btn btn-outline-primary w-100">Send message</button>
+                  <button type="submit" value="submit" class="btn btn-outline-primary w-100">Pre-order</button>
                 </div>
               </div>
             </form>
