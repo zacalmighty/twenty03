@@ -17,12 +17,6 @@ body {
   overflow-x: hidden;
 }
 
-section {
-  position: relative;
-  padding: 5rem 0;
-  overflow-x: hidden;
-}
-
 .hero-text {
   font-family: 'Alex Brush', cursive;
 }
