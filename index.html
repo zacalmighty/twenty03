@@ -60,44 +60,64 @@
             <header class="text-center m-5">
               <h2 class="lined text-uppercase">Enter for a <br> chance to win</h2>
             </header>
-            <p class="m-5">Looking for the perfect gift for your Valentine? Look no further! We are raffling off a set
-              of cozy hoodies and
-              sweatpants just in time for Valentine's Day. Enter now for a chance to win the ultimate comfort package
-              for you and your
-              sweetheart. Don't miss out on this opportunity to show your love and appreciation with the gift of
-              relaxation and
-              warmth. Enter the raffle by enter your information below and sending the payment through one of the
-              methods below. Good luck and Happy Valentine's Day!</p>
+            <div class="m-5">
+              <p>Valentine's Day is just around the corner and we have the perfect gift for your loved one. Introducing
+                our
+                Valentine's Day Raffle, where you can enter to win a matching set of cozy hoodies and sweatpants for you
+                and your
+                sweetheart.</p>
+
+              <p>For just $5 per entry, you can increase your chances of winning the ultimate comfort package that will
+                show your love
+                and appreciation. To enter, simply follow these easy steps:</p>
+
+              <ol>
+                <li>Click the link in our Bio</li>
+                <li>Enter your information and select your sizes</li>
+                <li>Choose the number of entries you want (each entry is $5)</li>
+                <li>Select your preferred payment method</li>
+                <li>If you receive an error message, don't worry, your entry has still been processed</li>
+                <li>Scan the QR code or lookup the username for the payment method you chose</li>
+                <li>Send the corresponding amount for the number of entries you selected</li>
+                <li>Like and share this post to increase your chances of winning</li>
+              </ol>
+
+              <p>The winner will be drawn on February 14th (Valentine's Day) so don't miss out on your chance to win the
+                ultimate
+                Valentine's Day gift. Enter now and good luck to everyone!</p>
+            </div>
           </div>
           <!-- <div class="col-lg-6"><img src="img/template-homepage.png" alt="..." class="img-fluid"></div> -->
         </div>
         <div class="row">
           <div class="col-lg-6">
-            <form id="myForm" class="contact-form" onsubmit="SubForm()">
+            <form id="myForm" class="contact-form was-validated" onsubmit="SubForm(event)">
               <div class="row">
                 <div class="form-group col-lg-6">
                   <label for="firstName">Your firstname *</label>
                   <input id="firstName" type="text" name="firstname" placeholder="Enter your firstname"
-                    class="form-control">
+                    class="form-control" required>
                 </div>
                 <div class="form-group col-lg-6">
                   <label for="lastName">Your lastname *</label>
                   <input id="lastName" type="text" name="lastname" placeholder="Enter your lastname"
-                    class="form-control">
+                    class="form-control" required>
                 </div>
                 <div class="form-group col-lg-6">
                   <label for="email">Your email *</label>
-                  <input id="email" type="email" name="email" placeholder="Enter your email" class="form-control">
+                  <input id="email" type="email" name="email" placeholder="Enter your email" class="form-control"
+                    required>
                 </div>
                 <div class="form-group col-lg-6">
                   <label for="phone">Your phone number *</label>
-                  <input id="phone" type="phone" name="phone" placeholder="Enter your phone number"
-                    class="form-control">
+                  <input id="phone" type="phone" name="phone" placeholder="Enter your phone number" class="form-control"
+                    required>
                 </div>
 
                 <div class="form-group col-lg-4 mt-3">
-                  <label for="size">Hoodie Size</label>
-                  <select id="size" name="hoodie size">
+                  <label for="hoodie_size">Hoodie Size</label>
+                  <select id="hoodie_size" name="hoodie size" required>
+                    <option value="" selected>Select</option>
                     <option value="x-small">X-Small</option>
                     <option value="small">Small</option>
                     <option value="medium">Medium</option>
@@ -106,8 +126,9 @@
                   </select>
                 </div>
                 <div class="form-group col-lg-4 mt-3">
-                  <label for="size">Sweatpants size</label>
-                  <select id="size" name="sweatpants size">
+                  <label for="sweatpants_size">Sweatpants size</label>
+                  <select id="sweatpants_size" name="sweatpants size" required>
+                    <option value="" selected>Select</option>
                     <option value="x-small">X-Small</option>
                     <option value="small">Small</option>
                     <option value="medium">Medium</option>
@@ -117,7 +138,8 @@
                 </div>
                 <div class="form-group col-lg-12 py-4">
                   <label for="amount"># of entries</label>
-                  <select id="amount" name="amount">
+                  <select id="amount" name="amount" required>
+                    <option value="" selected>Select</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -128,7 +150,8 @@
                 </div>
                 <div class="form-group col-lg-12 py-2">
                   <label for="payment">Payment sent to</label>
-                  <select id="payment" name="payment">
+                  <select id="payment" name="payment" required>
+                    <option value="" selected>Select</option>
                     <option value="venmo">Venmo</option>
                     <option value="zelle">Zelle</option>
                     <option value="paypal">Paypal</option>
@@ -137,7 +160,7 @@
 
                 </div>
                 <div class="form-group col-lg-12">
-                  <button type="submit" value="submit" class="btn rounded btn-outline-primary w-100">Enter</button>
+                  <button type="submit" value="submit" class="btn rounded btn-primary w-100">Enter</button>
                 </div>
               </div>
             </form>
@@ -161,6 +184,27 @@
         </div>
       </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Thank You!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section id="services" class="bg-gray py-5">
       <header class="text-center mb-5">
@@ -215,6 +259,44 @@
     </footer>
     <!-- JavaScript files-->
     <script src="vendor/jquery/jquery.min.js"></script>
+    <script>
+      function SubForm(e) {
+        e.preventDefault();
+        let formData = $("#myForm").serializeArray();
+        console.log(formData)
+        formData.push(
+          { name: 'paid', value: 'no' });
+        $.ajax({
+          url: "https://api.apispreadsheets.com/data/voa0d2aWfrcO5W90/",
+          type: "post",
+          data: formData,
+          success: function () {
+            <!-- alert("Form Data Submitted :)") -->
+
+            let note = document.createElement('p');
+            note.innerHTML = `Thank you for entering our Valentine's Day Raffle! We appreciate 
+            your support and wish you the best of luck in the drawing.
+
+            To complete your entry, please send your payment of $5 per entry through 
+            the method of your choice. You can find the QR code or username for each 
+            payment method below.
+
+            Thank you again for your support and we look forward to announcing the 
+            winner on Valentine's Day. Good luck!`
+
+            let modal = document.querySelector('.modal-body');
+            modal.innerHTML = "";
+            console.log(modal);
+            modal.appendChild(note);
+            $('#exampleModal').modal('show');
+            $("#myForm").find('input').val('');
+          },
+          error: function () {
+            alert("There was an error :(")
+          }
+        });
+      }
+    </script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/lightbox2/js/lightbox.min.js"></script>
     <script src="vendor/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
@@ -223,21 +305,6 @@
     <script src="https://kit.fontawesome.com/4fb1b020c4.js" crossorigin="anonymous"></script>
 
 
-    <script>
-      function SubForm() {
-        $.ajax({
-          url: "https://api.apispreadsheets.com/data/voa0d2aWfrcO5W90/",
-          type: "post",
-          data: $("#myForm").serializeArray(),
-          success: function () {
-            alert("Form Data Submitted :)")
-          },
-          error: function () {
-            alert("There was an error :(")
-          }
-        });
-      }
-    </script>
   </body>
 
 </html>
